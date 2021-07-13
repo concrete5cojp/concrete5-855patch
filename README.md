@@ -26,6 +26,8 @@ If you need some technical assistance, you can use our technical services. Pleas
 
 This fixes the error that draft pages of Page Panel not showing under certain editors.
 
+No need to add if only super admin is the editor of the site.
+
 ### Files to patch
 
 - application/bootstrap/app.php
@@ -40,6 +42,8 @@ https://github.com/concrete5/concrete5/pull/9489
 Search Index - Update jobs tried to update all files, users and express.
 However, this slows down the Concrete CMS resulted in time out or memory exhaustion error.
 Hissy is suggesting to go back to the previous state which only updates page index.
+
+No need to add if you don't experience any slowness.
 
 ###  Files to patch
 
@@ -61,6 +65,22 @@ Drop zone JS cache file included token by mistake, which resulted in forever gen
 ### Related PRs
 
 https://github.com/concrete5/concrete5/pull/9510
+
+## 4. CKEditor and dialog.js conflict
+
+Drop zone JS cache file included token by mistake, which resulted in forever generating cache, which create a large amount of cache file under certain circumstances.
+
+No need to add if your site doesn't enable `CSS and JavaScript` Cache
+
+###  Files to patch
+
+- application/js/app.js
+
+### Related PR & asset commit
+
+https://github.com/concrete5/concrete5/pull/9420
+https://github.com/concrete5/concrete5/commit/031a44572f4e3453ef38cb59bfbee97f2f5dd079
+
 
 # Changelog
 
