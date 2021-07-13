@@ -2,6 +2,13 @@
 /* @var Concrete\Core\Application\Application $app */
 /* @var Concrete\Core\Console\Application $console only set in CLI environment */
 
+/**
+ * There's an error not showing draft pages after upgrading to v855.
+ * @todo remove this override if it's fixed in the future.
+ * @link https://github.com/concrete5/concrete5/pull/9489
+ */
+$app->bind('\Concrete\Controller\Panel\Sitemap', \Application\Controller\Panel\Sitemap::class);
+
 /*
  * ----------------------------------------------------------------------------
  * # Custom Application Handler
